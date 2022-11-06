@@ -46,20 +46,18 @@ _该接口的属性继承了其父接口，{{domxref("EventTarget")}}._
   - : 只读属性 RTCPeerConnection.iceConnectionState 返回与 RTCPeerConnection 关联的 ICE 代理的状态类型为 RTCIceConnectionState 的枚举。
 - {{domxref("RTCPeerConnection.iceGatheringState")}} {{ReadOnlyInline}}
   - : 只读属性，返回一个 RTCIceGatheringState 类型的结构体，它描述了连接的 ICE 收集状态
-- {{domxref("RTCPeerConnection.idpLoginUrl")}} {{ReadOnlyInline}}
-  - : blah
 - {{domxref("RTCPeerConnection.localDescription")}} {{ReadOnlyInline}}
   - : 只读属性，返回一个 {{domxref("RTCSessionDescription")}} ，它描述了这条连接的本地端的会话控制（用户会话所需的属性以及配置信息）。如果本地的会话控制还没有被设置，它的值就会是 null。
 - {{domxref("RTCPeerConnection.peerIdentity")}} {{ReadOnlyInline}}
   - : 只读属性，返回一个 `RTCIdentityAssertion`，它由一组信息构成，包括一个域名（idp）以及一个名称（name），它们代表了这条连接的远端机器的身份识别信息。如果远端机器还没有被设置以及校验，这个属性会返回一个 `null` 值。一旦被设置，它不能被一般方法改变。
 - {{domxref("RTCPeerConnection.pendingLocalDescription")}} {{ReadOnlyInline}}
-  - : blah
+  - : 返回 {{DOMxRef("RTCSessionDescription")}} 对象，该对象展示连接本地端的待处理配置更改的信息。此函数并不是返回当前，而是在短期内可能存在的连接的信息。
 - {{domxref("RTCPeerConnection.pendingRemoteDescription")}} {{ReadOnlyInline}}
-  - : blah
+  - : 返回 {{DOMxRef("RTCSessionDescription")}} 对象，该对象展示连接远程端的待处理配置更改的信息。此函数并不是返回当前，而是在短期内可能存在的连接的信息。
 - {{domxref("RTCPeerConnection.remoteDescription")}} {{ReadOnlyInline}}
-  - : blah
+  - : 返回 {{DOMxRef("RTCSessionDescription")}} 对象，该对象展示连接远程端的，包括配置和媒体信息在内的会话的信息。如果尚未设置，则返回`null`。
 - {{domxref("RTCPeerConnection.sctp")}} {{ReadOnlyInline}}
-  - : blah
+  - : 返回 {{DOMxRef("RTCSctpTransport")}} 对象，该对象展示发送和接收 {{Glossary("SCTP")}} 数据的 SCTP 传输层的信息。 如果尚未协商 SCTP，则此值为`null`。
 - {{domxref("RTCPeerConnection.signalingState")}} {{ReadOnlyInline}}
   - : 返回一个 RTC 通信状态的结构体，这个结构体描述了本地连接的通信状态。这个 状态描述了一个定义连接配置的 SDP offer。它包含了下列信息，与{{domxref("MediaStream")}} 类型本地相关的对象的描述，媒体流编码方式或 RTP 和 RTCP 协议的选项，以及被 ICE 服务器收集到的 candidates(连接候选者)。当{{domxref("RTCPeerConnection.signalingState")}}的值改变时，对象上的{{event("signalingstatechange")}}事件会被触发。
 
